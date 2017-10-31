@@ -120,6 +120,7 @@ ul,li{
 }
 /********************************************************/
 /* flexslider */
+/*
 .flexslider{
     margin:0 auto;
     position:relative;
@@ -140,16 +141,6 @@ ul,li{
 .flexslider .slides li {
     display: none;
 }
-/*
-.flexslider .slides li a {
-	position: absolute;
-	left: 50%;
-}
-.flexslider .slides li a img{
-	position: relative;
-	left: -50%;
-}
-*/
 .flex-direction-nav a{
     width:60px;
     height:90px;
@@ -218,4 +209,5 @@ ul,li{
     padding: 0 20px;
     background-color:rgba(0,0,0,0.3);
 }
+*/
 /********************************************************/
