@@ -21,51 +21,22 @@
             <div class="clearfix"></div>
         </div>
         <div class="feed-list">
-            <div class="left row">
-                <a href="http://www.mifanxing.com">
-                    <div class="row-pic"><img src="image/row.jpg"/></div>
-                    <div class="masking"></div>
-                </a>
-                <h1>黑色电吉他</h1>
-                <p>芬达电音专属，演奏级别</p>
-                <div class="rmb-text"><p class="right">原价：¥200</p><h6 class="left">¥245</h6></div>
-            </div>
-            <div class="left row">
-                <a href="http://www.mifanxing.com">
-                    <div class="row-pic"><img src="image/row.jpg"/></div>
-                    <div class="masking"></div>
-                </a>
-                <h1>黑色电吉他</h1>
-                <p>芬达电音专属，演奏级别</p>
-                <div class="rmb-text"><p class="right">原价：¥200</p><h6 class="left">¥245</h6></div>
-            </div>
-            <div class="left row">
-                <a href="http://www.mifanxing.com">
-                    <div class="row-pic"><img src="image/row.jpg"/></div>
-                    <div class="masking"></div>
-                </a>
-                <h1>黑色电吉他</h1>
-                <p>芬达电音专属，演奏级别</p>
-                <div class="rmb-text"><p class="right">原价：¥200</p><h6 class="left">¥245</h6></div>
-            </div>
-            <div class="left row">
-                <a href="http://www.mifanxing.com">
-                    <div class="row-pic"><img src="image/row.jpg"/></div>
-                    <div class="masking"></div>
-                </a>
-                <h1>黑色电吉他</h1>
-                <p>芬达电音专属，演奏级别</p>
-                <div class="rmb-text"><p class="right">原价：¥200</p><h6 class="left">¥245</h6></div>
-            </div>
-            <div class="left row">
-                <a href="http://www.mifanxing.com">
-                    <div class="row-pic"><img src="image/row.jpg"/></div>
-                    <div class="masking"></div>
-                </a>
-                <h1>黑色电吉他</h1>
-                <p>芬达电音专属，演奏级别</p>
-                <div class="rmb-text"><p class="right">原价：¥200</p><h6 class="left">¥245</h6></div>
-            </div>
+            <?php foreach ($products as $product): ?>
+                <div class="left row">
+                    <a href="<?php echo $product['href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
+                        <div class="row-pic">
+                            <img src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>"/>
+                        </div>
+                        <div class="masking"></div>
+                    </a>
+                    <h1><?php echo $product['title'] ?></h1>
+                    <p><?php echo $product['description'] ?></p>
+                    <div class="rmb-text">
+                        <p class="right">原价：¥<?php echo $product['real_price'] ?></p>
+                        <h6 class="left">¥<?php echo $product['sale_price'] ?></h6>
+                    </div>
+                </div>
+            <?php endforeach ?>
         </div>
     </div>
 </div>
