@@ -1,10 +1,26 @@
 @charset "utf-8";
 /* CSS Document */
+body, html {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
 html {
     font-family: PingFangSC-Light,helvetica,'Heiti SC',"Microsoft YaHei",sans-serif!important;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     font-size: 16px;
+}
+body, button, dd, dl, form, h1, h2, h3, h4, h5, h6, input, ol, p, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+    list-style: none;
+}
+a, button {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 300px) {

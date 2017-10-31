@@ -42,36 +42,20 @@
                         </div>
                         <div class="masking"></div>
                     </a>
-                    <a href="<?php echo $product['href'] ?>">
+
                         <h1><?php echo $product['title'] ?></h1>
-                    </a>
-                    <a href="<?php echo $product['href'] ?>">
+
+
                         <p><?php echo $product['description'] ?></p>
-                    </a>
-                    <a href="<?php echo $product['href'] ?>">
+
                         <div class="rmb-text">
                             <p class="right">原价：¥<?php echo $product['real_price'] ?></p>
                             <h6 class="left">¥<?php echo $product['sale_price'] ?></h6>
                         </div>
-                    </a>
+
                 </div>
             <?php endforeach ?>
         </div>
     </div>
 </div>
-<script src="<?php echo APP_URL ?>/public/js/jquery-1.8.2.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo APP_URL ?>/public/js/slider.js"></script>
-<script type="text/javascript">
-    $(function(){
-        $('#banner').flexslider({
-            animation: "slide", //转换方式 fade淡入淡出 slide滚动
-            direction:"horizontal", //滚动方向 horizontal左右 vertical上下
-            slideshowSpeed: 3000, //停留时间
-            directionNav: true, //是否显示左右控制按钮 true&false
-            controlNav: true, //是否显示下方控制按钮 true&false
-            mousewheel: true, //是否允许鼠标控制滚动 true&false
-        });
-    });
-
-</script>
 </body>
