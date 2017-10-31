@@ -22,13 +22,13 @@ class Core {
             $urlArray = explode('/', $url);
             // 获取控制器名
             $controllerName = ucfirst($urlArray[0]);
-            $controllerNames = array('Index','Item','M');
+            $controllerNames = array('Index','Items');
             if(!in_array($controllerName,$controllerNames))
                 $controllerName = 'Index';
             // 获取动作名
             array_shift($urlArray);
             $action = empty($urlArray[0]) ? 'index' : $urlArray[0];
-            $actions = array('index','add','M');
+            $actions = array('index','list1','list2');
             if(!in_array($action,$actions))
                 $action = 'index';
             //获取URL参数
