@@ -42,17 +42,12 @@
                         </div>
                         <div class="masking"></div>
                     </a>
-
-                        <h1><?php echo $product['title'] ?></h1>
-
-
-                        <p><?php echo $product['description'] ?></p>
-
-                        <div class="rmb-text">
-                            <p class="right">原价：¥<?php echo $product['real_price'] ?></p>
-                            <h6 class="left">¥<?php echo $product['sale_price'] ?></h6>
-                        </div>
-
+                    <h1><?php echo $product['title'] ?></h1>
+                    <p><?php echo $product['description'] ?></p>
+                    <div class="rmb-text">
+                        <p class="right">原价：¥<?php echo $product['real_price'] ?></p>
+                        <h6 class="left">¥<?php echo $product['sale_price'] ?></h6>
+                    </div>
                 </div>
             <?php endforeach ?>
         </div>
