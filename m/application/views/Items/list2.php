@@ -58,7 +58,8 @@
             slideshowSpeed: 3000, //停留时间
             directionNav: true, //是否显示左右控制按钮 true&false
             controlNav: true, //是否显示下方控制按钮 true&false
-            mousewheel: true, //是否允许鼠标控制滚动 true&false
+            mousewheel: false, //是否允许鼠标控制滚动 true&false
+            pauseOnAction: false,
         });
     });
 </script>
