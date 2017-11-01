@@ -77,11 +77,11 @@ ul,li{
 }
 .row-pic{
     width:100%;
-    height:100%;
+    height:auto;
 }
 .row-pic img{
     width:100%;
-    height:100%;
+    height:auto;
 }
 .masking{
     content: " ";
