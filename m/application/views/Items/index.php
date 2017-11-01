@@ -3,25 +3,21 @@
     <title>ebay活动大促</title>
     <meta name="keywords" content="海淘在eBay | 海量库存 奥莱价格 安心海淘">
     <meta name="description" content="海淘在eBay | 海量库存 奥莱价格 安心海淘">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="yes" name="apple-touch-fullscreen">
-    <meta content="telephone=no,email=no" name="format-detection">
-    <meta name="screen-orientation" content="portrait">
-    <meta name="x5-orientation" content="portrait">
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-    <link rel="shortcut icon" href="//www.ebay.cn/favicon.ico">
-    <link href="<?php echo APP_URL ?>/public/css/mobile/items.css" rel="stylesheet">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="//www.ebay.cn/favicon.ico" type="image/x-icon">
+    <link href="<?php echo APP_URL ?>/public/css/mobile/items.css" rel="stylesheet" type="text/css" />
+    <script src="<?php echo APP_URL ?>/public/js/jquery-1.8.2.min.js" type="text/javascript"></script>
 </head>
-
 <body>
 <div class="index">
     <div id="banner" class="flexslider">
-        <ul class="banner-roll slides">
+        <ul class="slides">
             <?php foreach ($banners as $banner): ?>
                 <li>
                     <a href="<?php echo $banner['href'] ?>" target="_blank" title="<?php echo $banner['title'] ?>">
                         <img src="<?php echo $banner['image'] ?>" title="<?php echo $banner['title'] ?>" alt="<?php echo $banner['title'] ?>" />
-                        <div class="title slider-title"><P><?php echo $banner['title'] ?></P></div>
+                        <div class="slider-title"><?php echo $banner['title'] ?></div>
                     </a>
                 </li>
             <?php endforeach ?>
@@ -29,7 +25,7 @@
     </div>
     <div class="content">
         <div class="headline">
-            <p class="left">EBAY大卖</p>
+            <p class="left">限时特卖</p>
             <!--<p class="right">更多>></p>-->
             <div class="clearfix"></div>
         </div>
@@ -45,12 +41,25 @@
                     <h1><?php echo $product['title'] ?></h1>
                     <p><?php echo $product['description'] ?></p>
                     <div class="rmb-text">
-                        <p class="right">原价：¥<?php echo $product['real_price'] ?></p>
-                        <h6 class="left">¥<?php echo $product['sale_price'] ?></h6>
+                        <p>原价：¥<?php echo $product['real_price'] ?></p>
+                        <h6>¥<?php echo $product['sale_price'] ?></h6>
                     </div>
                 </div>
             <?php endforeach ?>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="<?php echo APP_URL ?>/public/js/slider.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#banner').flexslider({
+            animation: "slide", //转换方式 fade淡入淡出 slide滚动
+            direction:"horizontal", //滚动方向 horizontal左右 vertical上下
+            slideshowSpeed: 3000, //停留时间
+            directionNav: false, //是否显示左右控制按钮 true&false
+            controlNav: false, //是否显示下方控制按钮 true&false
+            mousewheel: true, //是否允许鼠标控制滚动 true&false
+        });
+    });
+</script>
 </body>

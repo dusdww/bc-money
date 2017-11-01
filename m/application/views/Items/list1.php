@@ -6,21 +6,12 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="shortcut icon" href="//www.ebay.cn/favicon.ico" type="image/x-icon">
-    <link href="<?php echo APP_URL ?>/public/css/mobile/index1.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo APP_URL ?>/public/css/mobile/items.css" rel="stylesheet" type="text/css" />
     <script src="<?php echo APP_URL ?>/public/js/jquery-1.8.2.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="index">
-<!--    <div class="banner">
-        <ul class="banner-roll">
-            <li><a href="http://www.mifanxing.com/"><img src="image/banner.jpg" /></a></li>
-            <li><a href="http://www.mifanxing.com/"><img src="image/banner.jpg" /></a></li>
-        </ul>
-        <div class="title">
-            <P>30年专业音响</P>
-        </div>
-    </div>-->
-    <div id="banner" class="banner flexslider">
+    <div id="banner" class="flexslider">
         <ul class="slides">
             <?php foreach ($banners as $banner): ?>
                 <li>
@@ -35,7 +26,7 @@
     <div class="content">
         <div class="headline">
             <p class="left">限时特卖</p>
-            <p class="right">更多>></p>
+            <!--<p class="right">更多>></p>-->
             <div class="clearfix"></div>
         </div>
         <div class="feed-list">
@@ -62,12 +53,12 @@
 <script type="text/javascript">
     $(function(){
         $('#banner').flexslider({
-            animation: "fade", //转换方式 fade淡入淡出 slide滚动
+            animation: "slide", //转换方式 fade淡入淡出 slide滚动
             direction:"horizontal", //滚动方向 horizontal左右 vertical上下
             slideshowSpeed: 3000, //停留时间
-            directionNav: true, //是否显示左右控制按钮 true&false
-            controlNav: true, //是否显示下方控制按钮 true&false
-            mousewheel: false, //是否允许鼠标控制滚动 true&false
+            directionNav: false, //是否显示左右控制按钮 true&false
+            controlNav: false, //是否显示下方控制按钮 true&false
+            mousewheel: true, //是否允许鼠标控制滚动 true&false
         });
     });
 </script>
