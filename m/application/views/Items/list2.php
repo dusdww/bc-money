@@ -65,6 +65,8 @@
             mousewheel: true, //是否允许鼠标控制滚动 true&false
             pauseOnAction: false,
             pausePlay:false,
+            pauseOnHover:false,
+            touch:false,
         });
     });
 </script>
