@@ -18,7 +18,10 @@
                 <a href="<?php echo $banner['href'] ?>" target="_blank" title="<?php echo $banner['title'] ?>">
                     <div>
                         <img src="<?php echo $banner['image'] ?>" title="<?php echo $banner['title'] ?>" alt="<?php echo $banner['title'] ?>" />
-                        <div class="slider-title"><?php echo $banner['title'] ?></div>
+                        <div class="slider-title">
+                            <span><?php echo $banner['title'] ?></span>
+                        </div>
+
                     </div>
                 </a>
             </li>
