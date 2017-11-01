@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="index">
-    <div class="banner">
+<!--    <div class="banner">
         <ul class="banner-roll">
             <li><a href="http://www.mifanxing.com/"><img src="image/banner.jpg" /></a></li>
             <li><a href="http://www.mifanxing.com/"><img src="image/banner.jpg" /></a></li>
@@ -19,8 +19,8 @@
         <div class="title">
             <P>30年专业音响</P>
         </div>
-    </div>
-    <div id="banner" class="flexslider">
+    </div>-->
+    <div id="banner" class="banner flexslider">
         <ul class="slides">
             <?php foreach ($banners as $banner): ?>
                 <li>
