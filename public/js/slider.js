@@ -69,16 +69,16 @@
 				});
 				c.pausePlay && f.pausePlay.setup();
 				c.slideshow && (c.pauseOnHover && a.hover(function() {
-						//!a.manualPlay && !a.manualPause && a.pause()
+						!a.manualPlay && !a.manualPause && a.pause()
 					},
 					function() {
 						!a.manualPause && !a.manualPlay && a.play()
 					}), 0 < c.initDelay ? setTimeout(a.play, c.initDelay) : a.play());
 				p && c.touch && f.touch();
 				(!r || r && c.smoothHeight) && d(window).bind("resize focus", f.resize);
-				//setTimeout(function() {
-				//	c.start(a)
-				//}, 200)
+				setTimeout(function() {
+					c.start(a)
+				}, 200)
 			},
 			asNav: {
 				setup: function() {

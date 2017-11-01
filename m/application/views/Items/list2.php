@@ -16,8 +16,10 @@
             <?php foreach ($banners as $banner): ?>
                 <li>
                     <a href="<?php echo $banner['href'] ?>" target="_blank" title="<?php echo $banner['title'] ?>">
-                        <img src="<?php echo $banner['image'] ?>" title="<?php echo $banner['title'] ?>" alt="<?php echo $banner['title'] ?>" />
-                        <div class="slider-title"><?php echo $banner['title'] ?></div>
+                        <div>
+                            <img src="<?php echo $banner['image'] ?>" title="<?php echo $banner['title'] ?>" alt="<?php echo $banner['title'] ?>" />
+                            <div class="slider-title"><?php echo $banner['title'] ?></div>
+                        </div>
                     </a>
                 </li>
             <?php endforeach ?>
@@ -60,6 +62,7 @@
             controlNav: true, //是否显示下方控制按钮 true&false
             mousewheel: true, //是否允许鼠标控制滚动 true&false
             pauseOnAction: false,
+            pausePlay:false,
         });
     });
 </script>

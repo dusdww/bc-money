@@ -61,16 +61,14 @@ a{
 .flexslider .slides li {
     display: none;
 }
-/*
 .flexslider .slides li a {
-	position: absolute;
-	left: 50%;
+    position: absolute;
+    left: 50%;
 }
-.flexslider .slides li a img{
-	position: relative;
-	left: -50%;
+.flexslider .slides li a>div{
+    position: relative;
+    left: -50%;
 }
-*/
 .flex-direction-nav a{
     width:60px;
     height:90px;

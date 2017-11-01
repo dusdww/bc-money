@@ -16,8 +16,10 @@
         <?php foreach ($banners as $banner): ?>
             <li>
                 <a href="<?php echo $banner['href'] ?>" target="_blank" title="<?php echo $banner['title'] ?>">
-                    <img src="<?php echo $banner['image'] ?>" title="<?php echo $banner['title'] ?>" alt="<?php echo $banner['title'] ?>" />
-                    <div class="slider-title"><?php echo $banner['title'] ?></div>
+                    <div>
+                        <img src="<?php echo $banner['image'] ?>" title="<?php echo $banner['title'] ?>" alt="<?php echo $banner['title'] ?>" />
+                        <div class="slider-title"><?php echo $banner['title'] ?></div>
+                    </div>
                 </a>
             </li>
         <?php endforeach ?>
