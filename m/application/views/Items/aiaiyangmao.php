@@ -29,7 +29,7 @@
     </div>
     <div class="content">
         <div class="headline">
-            <p class="left">限时特卖</p>
+            <p class="left">EBAY大卖</p>
             <!--<p class="right">更多>></p>-->
             <div class="clearfix"></div>
         </div>
@@ -45,8 +45,8 @@
                     <h1><?php echo $product['title'] ?></h1>
                     <p><?php echo $product['description'] ?></p>
                     <div class="rmb-text">
-                        <p>原价：¥<?php echo $product['real_price'] ?></p>
-                        <h6>¥<?php echo $product['sale_price'] ?></h6>
+                        <p class="right">原价：¥<?php echo $product['real_price'] ?></p>
+                        <h6 class="left">¥<?php echo $product['sale_price'] ?></h6>
                     </div>
                 </div>
             <?php endforeach ?>

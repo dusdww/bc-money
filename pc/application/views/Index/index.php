@@ -6,72 +6,71 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="shortcut icon" href="//www.ebay.cn/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="<?php echo APP_URL ?>/public/css/index.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo APP_URL ?>/public/css/items.css" type="text/css"/>
+    <script src="<?php echo APP_URL ?>/public/js/jquery-1.8.2.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-<div class="g-bd">
-    <div id="indexRoot">
-        <div class="m-app">
-            <div class="m-focus j-focus">
-                <div class="m-focus" style="display:block;">
-                    <div class="focus-bd">
-                        <div id="js-focusSlick" class="js-slick m-focusSlick slick-initialized slick-slider slick-dotted">
-                            <button type="button" class="slick-prev icon-normal-slick-leftRound w-icon-normal slick-arrow" style="display: block; left: 86.5px;"></button>
-                            <div aria-live="polite" class="slick-list draggable">
-                                <div class="slick-track" style="opacity: 1; width: 2766px;">
-                                    <?php foreach ($banners as $banner): ?>
-                                    <div class="item imgCenterBanner slick-slide slick-current slick-active"style="width: 1383px; position: relative; left: 0px; top: 0px; z-index: 1000; opacity: 1; transition: opacity 500ms ease;;margin: 0 5%;">
-                                        <a href="<?php echo $banner['href'] ?>" target="_blank" title="<?php echo $banner['title'] ?>" class="wrap">
-                                            <img src="<?php echo $banner['image'] ?>" alt="<?php echo $banner['title'] ?>" class="js-img">
-                                        </a>
-                                    </div>
-                                    <?php endforeach ?>
-                                </div>
-                            </div>
-                            <button type="button" class="slick-next icon-normal-slick-rightRound w-icon-normal slick-arrow" style="display: block; right: 86.5px;"></button>
-                            <ul class="slick-dots" style="display: block;">
-                                <?php foreach ($banners as $banner): ?>
-                                <li class="slick-active" id="slick-slide<?php echo $banner['id'] ?>">
-                                    <button type="button"><?php echo $banner['id'] ?></button>
-                                </li>
-                                <?php endforeach ?>
-                            </ul>
+<div id="banner" class="flexslider">
+    <ul class="slides">
+        <?php foreach ($banners as $banner): ?>
+            <li>
+                <a href="<?php echo $banner['href'] ?>" target="_blank" title="<?php echo $banner['title'] ?>">
+                    <div>
+                        <img src="<?php echo $banner['image'] ?>" title="<?php echo $banner['title'] ?>" alt="<?php echo $banner['title'] ?>" />
+                        <div class="slider-title">
+                            <span><?php echo $banner['title'] ?></span>
                         </div>
                     </div>
-                </div>
-            </div>
+                </a>
+            </li>
+        <?php endforeach ?>
+    </ul>
+</div><!--flexslider end-->
 
-            <div class="m-indexCates">
-                <div class="g-row">
-                    <div class="m-indexCate">
-                        <div class="bd">
-                            <ul class="itemList">
-                                <?php foreach ($products as $product): ?>
-                                <li class="item">
-                                    <div class="m-product ">
-                                        <div class="hd">
-                                            <a href="<?php echo $product['href'] ?>" title="<?php echo $product['title'] ?>" target="_blank" class="imgWrap">
-                                                <img class="img img-lazyload j-lazyload img-lazyloaded" src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>">
-                                                <div class="colorNum" style="display:block;"><?php echo $product['description'] ?></div>
-                                            </a>
-                                        </div>
-                                        <div class="bd">
-                                            <div class="prdtTags"></div>
-                                            <h4 class="name">
-                                                <a href="<?php echo $product['href'] ?>" title="<?php echo $product['title'] ?>" target="_blank"><?php echo $product['title'] ?></a>
-                                            </h4>
-                                            <p class="price"><span class="retailPrice"><span">¥</span><span><?php echo $product['sale_price'] ?></span></span></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <?php endforeach ?>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- list -->
+<div id="list" class="wpn mtw">
+    <div class="list-title">
+        <span class="title">EBAY大卖</span>
+        <!--<span class="more">更多 >></span>-->
     </div>
-</div>
+    <ul class="list cl">
+        <?php foreach ($products as $product): ?>
+            <li class="list-item">
+                <!-- 内容列表项图片 -->
+                <div class="image-banner">
+                    <a href="<?php echo $product['href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
+                        <img class="image" src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>"/>
+                    </a>
+                </div>
+                <!-- 内容列表项信息 -->
+                <div class="info">
+                    <a href="<?php echo $product['href'] ?>">
+                        <h4 class="title"><?php echo $product['title'] ?></h4>
+                    </a>
+                    <a href="<?php echo $product['href'] ?>">
+                        <p class="describe"><?php echo $product['description'] ?></p>
+                    </a>
+                    <a href="<?php echo $product['href'] ?>">
+                        <span class="price">￥ <?php echo $product['sale_price'] ?></span>
+                        <span class="old-price">￥ <?php echo $product['real_price'] ?></span>
+                    </a>
+                </div>
+            </li>
+        <?php endforeach ?>
+    </ul>
+
+    <script type="text/javascript" src="<?php echo APP_URL ?>/public/js/slider.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#banner').flexslider({
+                animation: "fade", //转换方式 fade淡入淡出 slide滚动
+                direction:"horizontal", //滚动方向 horizontal左右 vertical上下
+                slideshowSpeed: 3000, //停留时间
+                directionNav: true, //是否显示左右控制按钮 true&false
+                controlNav: true, //是否显示下方控制按钮 true&false
+                mousewheel: false, //是否允许鼠标控制滚动 true&false
+            });
+        });
+    </script>
 </body>

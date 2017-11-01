@@ -21,7 +21,6 @@
                         <div class="slider-title">
                             <span><?php echo $banner['title'] ?></span>
                         </div>
-
                     </div>
                 </a>
             </li>
@@ -73,6 +72,5 @@
                 mousewheel: false, //是否允许鼠标控制滚动 true&false
             });
         });
-
     </script>
 </body>
