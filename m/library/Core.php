@@ -28,7 +28,7 @@ class Core {
             // 获取动作名
             array_shift($urlArray);
             $action = empty($urlArray[0]) ? 'index' : $urlArray[0];
-            $actions = array('index','smth','zuanke8','mgpyh','duoshou','laoyang','ailang','feichang','aiaiyangmao','l1','l2');
+            $actions = array('index','smth','zuanke8','mgpyh','duoshou','laoyang','ailang','feichang','aiaiyangmao','l1','l2','l3','l4','l5','l6','l7','l8','l9','laoyu','lvyou','huihui');
             if(!in_array($action,$actions))
                 $action = 'index';
             //获取URL参数

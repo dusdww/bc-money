@@ -91,4 +91,91 @@ class ItemsController extends Controller {
         $this->assign('banners', $banners);
         $this->assign('products', $products);
     }
+
+    // 3
+    public function l3() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',130);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',130);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    // 4
+    public function l4() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',140);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',140);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    // 5
+    public function l5() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',150);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',150);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    // 6
+    public function l6() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',160);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',160);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    // 7
+    public function l7() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',170);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',170);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    // 8
+    public function l8() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',180);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',180);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    // 9
+    public function l9() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',190);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',190);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    public function laoyu() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',200);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',200);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    public function lvyou() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',210);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',210);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
+
+    public function huihui() {
+        $banners = (new LinksModel)->selectAllByColumnValue('type',220);
+        $products = (new ProductsModel)->selectAllByColumnValue('type',220);
+
+        $this->assign('banners', $banners);
+        $this->assign('products', $products);
+    }
 }
