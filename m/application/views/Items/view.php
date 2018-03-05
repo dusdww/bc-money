@@ -36,7 +36,7 @@
         <div class="feed-list">
             <?php foreach ($products as $product): ?>
                 <div class="left row">
-                    <a href="<?php echo $product['href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
+                    <a href="<?php echo $product['sale_href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
                         <div class="row-pic">
                             <img src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>"/>
                         </div>
