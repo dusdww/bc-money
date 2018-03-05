@@ -11,6 +11,7 @@ class ItemsController extends Controller {
     }
 
     public function view($id = null) {
+        var_dump($channel);
         $channel =  (new ChannelsModel)->select($id);
         var_dump($channel);
         $banners = (new LinksModel)->selectAllByColumnValue('type',0);
