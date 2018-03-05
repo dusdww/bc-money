@@ -34,6 +34,7 @@ class Core {
             //获取URL参数
             array_shift($urlArray);
             $queryString = empty($urlArray) ? array() : $urlArray;
+            echo $queryString;
         }
         // 数据为空的处理
         $queryString  = empty($queryString) ? array() : $queryString;

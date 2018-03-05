@@ -13,7 +13,7 @@ class ItemsController extends Controller {
     public function view($id = null) {
         $channel =  (new ChannelsModel)->select($id);
         $banners = (new LinksModel)->selectAllByColumnValue('type',0);
-        $products = (new ProductsModel)->selectAllByColumnValue('enabled',1);
+        $products = (new ProductsModel)->selectAll();
         foreach($products as $product) {
             $product['sale_href'] = $product['ebay_href'] + $channel["code"];
         }
