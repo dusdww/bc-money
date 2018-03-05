@@ -11,15 +11,11 @@ class ItemsController extends Controller {
     }
 
     public function view($id = null) {
-        var_dump($id);
         $channel =  (new ChannelsModel)->select($id);
-        var_dump($channel);
         $banners = (new LinksModel)->selectAllByColumnValue('type',0);
         $products = (new ProductsModel)->selectAll();
-        foreach($products as $product) {
-            $product['sale_href'] = $product['ebay_href'].$channel["code"];
-
-            var_dump($product['sale_href']);
+        foreach($products as $key => $product) {
+            $products[$key]['sale_href'] = $product['ebay_href'].$channel["code"];
         }
 
         $this->assign('banners', $banners);
