@@ -12,6 +12,7 @@ class ItemsController extends Controller {
 
     public function view($id = null) {
         $channel =  (new ChannelsModel)->select($id);
+        var_dump($channel);
         $banners = (new LinksModel)->selectAllByColumnValue('type',0);
         $products = (new ProductsModel)->selectAll();
         foreach($products as $product) {
