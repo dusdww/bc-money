@@ -10,8 +10,11 @@ class ItemsController extends Controller {
         $this->assign('products', $products);
     }
 
-    public function view($id = null) {
-        $channel =  (new ChannelsModel)->select($id);
+    public function view($id = null,$name = null) {
+        if($id != null)
+            $channel =  (new ChannelsModel)->select($id);
+        if($name != null)
+            $channel =  (new ChannelsModel)->selectAllByColumnValue('name',$name);
         $banners = (new LinksModel)->selectAllByColumnValue('type',0);
         $products = (new ProductsModel)->selectAll();
         foreach($products as $product) {
