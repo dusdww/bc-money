@@ -18,8 +18,10 @@ class ItemsController extends Controller {
         $products = (new ProductsModel)->selectAll();
         foreach($products as $product) {
             $product['sale_href'] = $product['ebay_href'].$channel["code"];
+
+            var_dump($product['sale_href']);
         }
-        var_dump($products);
+
         $this->assign('banners', $banners);
         $this->assign('products', $products);
 
