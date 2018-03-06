@@ -9,7 +9,7 @@ class Core {
 
         $this->removeMagicQuotes();
 
-        $this->unregisterGlobals();
+        $this->unRegisterGlobals();
 
         $this->Route();
     }
@@ -74,7 +74,7 @@ class Core {
         }
     }
     // 检测自定义全局变量（register globals）并移除
-    function unregisterGlobals() {
+    function unRegisterGlobals() {
         if (ini_get('register_globals')) {
             $array = array('_SESSION', '_POST', '_GET', '_COOKIE', '_REQUEST', '_SERVER', '_ENV', '_FILES');
             foreach ($array as $value) {

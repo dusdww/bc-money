@@ -1,4 +1,4 @@
-l2.php<head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>ebay活动大促</title>
     <meta name="keywords" content="海淘在eBay | 海量库存 奥莱价格 安心海淘">
@@ -39,7 +39,7 @@ l2.php<head>
             <li class="list-item">
                 <!-- 内容列表项图片 -->
                 <div class="image-banner">
-                    <a href="<?php echo $product['href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
+                    <a href="<?php echo $product['ebay_href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
                         <img class="image" src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>"/>
                     </a>
                 </div>

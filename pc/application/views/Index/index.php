@@ -39,7 +39,7 @@
             <li class="list-item">
                 <!-- 内容列表项图片 -->
                 <div class="image-banner">
-                    <a href="<?php echo $product['href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
+                    <a href="<?php echo $product['ebay_href'] ?>" title="<?php echo $product['title'] ?>" target="_blank">
                         <img class="image" src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>"/>
                     </a>
                 </div>
