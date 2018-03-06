@@ -18,7 +18,7 @@ class ItemsController extends Controller {
         $banners = (new LinksModel)->selectAllByColumnValue('type',0);
         $products = (new ProductsModel)->selectAll();
         foreach($products as $key => $product) {
-            $products[$key]['sale_href'] = $channel["card_url"] . $channel["prev_params"] . $channel["code"] . $channel["next_params"] . $product['ebay_href}'];
+            $products[$key]['sale_href'] = $channel["card_url"] . $channel["prev_params"] . $channel["code"] . $channel["next_params"] . $product['ebay_href'];
         }
 
         $this->assign('banners', $banners);
