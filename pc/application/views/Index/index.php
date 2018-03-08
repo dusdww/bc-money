@@ -45,13 +45,13 @@
                 </div>
                 <!-- 内容列表项信息 -->
                 <div class="info">
-                    <a href="<?php echo $product['href'] ?>">
+                    <a href="<?php echo $product['sale_href'] ?>">
                         <h4 class="title"><?php echo $product['title'] ?></h4>
                     </a>
-                    <a href="<?php echo $product['href'] ?>">
+                    <a href="<?php echo $product['sale_href'] ?>">
                         <p class="describe"><?php echo $product['description'] ?></p>
                     </a>
-                    <a href="<?php echo $product['href'] ?>">
+                    <a href="<?php echo $product['sale_href'] ?>">
                         <span class="price">￥ <?php echo $product['sale_price'] ?></span>
                         <span class="old-price">￥ <?php echo $product['real_price'] ?></span>
                     </a>
